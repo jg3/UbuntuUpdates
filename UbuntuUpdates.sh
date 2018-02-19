@@ -39,6 +39,9 @@ if [ -f /var/run/reboot-required ]; then
     echo -e $TEXT_RESET
 fi
 
+# run the check shown in the MOTD to show the new status.
+/usr/lib/update-notifier/apt_check.py --human-readable
+
 echo "Do you wish to reboot?"
 select yn in "Yes" "No"; do
     case $yn in
