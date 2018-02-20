@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Description:   A simple script to update an Ubuntu system.
+
+# Disclaimer:  This script is provided for you to use at your own risk.
+# No warranty or promise of any kind is attached.   
+# You can really screw up your system by running this script.
+
+
 # this test for a null value of $BASH identifies sh
 # which is the most common case of not-bash
 if [ -z "$BASH" ] ; then
@@ -53,11 +60,12 @@ if [ -f /var/run/reboot-required ]; then
     echo -e $TEXT_RESET
 fi
 
+# I find I'm not a huge fan of select here, might re-do this later
 echo "Do you wish to reboot?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes|Y|y|1 ) echo sudo reboot;;
-        No|N|n|2 ) exit;;
+        Yes ) echo sudo reboot;;
+        No ) exit;;
         * ) echo "pick a number 1, 2"
     esac
 done
