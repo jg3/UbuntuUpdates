@@ -31,3 +31,8 @@ These are the four steps I would do every time:
     cd UbuntuUpdates
     chmod u+x UpuntuUpdates.sh
     ./UpuntuUpdates.sh
+
+
+
+----
+It's great if you find this useful, drop me a note or star or something.  But if I am perfectly honest I'm mostly using this as an opportunity to become familiar with git and GitHub.
