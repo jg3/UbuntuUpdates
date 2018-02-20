@@ -3,7 +3,7 @@
 # Description:   A simple script to update an Ubuntu system.
 
 # Disclaimer:  This script is provided for you to use at your own risk.
-# No warranty or promise of any kind is attached.   
+# No warranty or promise of any kind is attached.
 # You can really screw up your system by running this script.
 
 
@@ -64,7 +64,7 @@ fi
 echo "Do you wish to reboot?"
 select yn in "Yes" "No"; do
     case $yn in
-        Yes ) echo sudo reboot;;
+        Yes ) sudo reboot;;
         No ) exit;;
         * ) echo "pick a number 1, 2"
     esac
