@@ -4,6 +4,7 @@ if [ !$BASH ] ; then
   echo "Calling this script under sh will not work as well."
   echo "Either call as \"bash ./$1\" or do \"chmod u+x $1\" "
   echo "and then run it normally."
+  exit
 fi
 
 TEXT_RESET='\e[0m'
