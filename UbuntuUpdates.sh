@@ -2,7 +2,7 @@
 
 if [ !$BASH ] ; then
   echo "Calling this script under sh will not work as well."
-  echo "Either call as \"bash ./$0\" or do \"chmod u+x $0\" "
+  echo "Either call as \"bash $0\" or do \"chmod u+x $0\" "
   echo "and then run it normally."
   exit
 fi
