@@ -54,10 +54,10 @@ if [ -f /var/run/reboot-required ]; then
 fi
 
 echo "Do you wish to reboot?"
-#select yn in "Yes" "No"; do
+select yn in "Yes" "No"; do
     case $yn in
         Yes|Y|y|1 ) echo sudo reboot;;
         No|N|n|2 ) exit;;
         * ) echo "pick a number 1, 2"
     esac
-#done
+done
