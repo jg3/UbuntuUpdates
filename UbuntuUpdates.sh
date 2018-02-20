@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [ !$BASH ] ; then
+# this test for a null value of $BASH identifies sh
+# which is the most common case of not-bash
+if [ -z "$BASH" ] ; then
   echo "Calling this script under sh will not work as well."
   echo "Either call as \"bash $0\" or do \"chmod u+x $0\" "
   echo "and then run it normally."
@@ -52,10 +54,10 @@ if [ -f /var/run/reboot-required ]; then
 fi
 
 echo "Do you wish to reboot?"
-select yn in "Yes" "No"; do
+#select yn in "Yes" "No"; do
     case $yn in
-        Yes ) sudo reboot;;
-        No ) exit;;
+        Yes|Y|y|1 ) echo sudo reboot;;
+        No|N|n|2 ) exit;;
         * ) echo "pick a number 1, 2"
     esac
-done
+#done
