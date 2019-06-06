@@ -24,13 +24,13 @@ These are the four steps I would do every time:
 
 ## Pull this project
 
-    get clone https://github.com/jg3/UbuntuUpdates.git
+    git clone https://github.com/jg3/UbuntuUpdates.git
 
 ## Run the updates
 
     cd UbuntuUpdates
-    chmod u+x UpuntuUpdates.sh
-    ./UpuntuUpdates.sh
+    chmod u+x UbuntuUpdates.sh
+    ./UbuntuUpdates.sh
 
 
 
